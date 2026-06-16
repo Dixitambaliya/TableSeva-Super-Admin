@@ -1,4 +1,4 @@
-import { Search, ChevronLeft, ChevronRight, CalendarDays, LayoutDashboard, Wallet, Users, CheckCircle2 } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight, CalendarDays, LayoutDashboard, Wallet, Users, CheckCircle2, DollarSign } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -7,20 +7,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const stats = [
   { title: "PLATFORM EARNINGS", value: "$482,900", sub: "+12.5%", color: "text-success", icon: Wallet },
-  { title: "TODAY'S EARNINGS", value: "$12,450", sub: "", color: "text-dark-brown", icon: CalendarDays },
+  { title: "TODAY'S EARNINGS", value: "$12,450", sub: "", color: "text-dark-brown", icon: DollarSign },
   { title: "THIS MONTH", value: "$156,020", sub: "", color: "text-dark-brown", icon: CalendarDays },
   { title: "TOTAL VENDORS", value: "1,248", sub: "", color: "text-dark-brown", icon: Users },
   { title: "COMPLETED", value: "8,412", sub: "", color: "text-success", icon: CheckCircle2 },
 ];
 
 const vendorData = [
-  { id: "BB", name: "Burger Bistro", email: "j.doe@example.com", phone: "+1234 567 890", orders: 142, sales: "$14,250.00", earning: "$10,582.50", status: "Active", img: "/burger.jpg" },
-  { id: "SH", name: "Sushi House", email: "info@sushihouse.com", phone: "+1987 654 321", orders: 89, sales: "$9,120.00", earning: "$6,902.00", status: "Active", img: "/sushi.jpg" },
-  { id: "PF", name: "Pasta Factory", email: "sales@pastafactory.net", phone: "+1444 333 222", orders: 210, sales: "$21,450.00", earning: "$16,065.00", status: "Inactive", img: "/pasta.jpg" },
+  { id: "BB", name: "Burger Bistro", email: "j.doe@example.com", phone: "+1234 567 890", tables: 10, orders: 142, sales: "$14,250.00", earning: "$10,582.50", status: "Active", img: "/burger.jpg" },
+  { id: "SH", name: "Sushi House", email: "info@sushihouse.com", phone: "+1987 654 321", tables: 20, orders: 89, sales: "$9,120.00", earning: "$6,902.00", status: "Active", img: "/sushi.jpg" },
+  { id: "PF", name: "Pasta Factory", email: "sales@pastafactory.net", phone: "+1444 333 222", tables: 30, orders: 210, sales: "$21,450.00", earning: "$16,065.00", status: "Inactive", img: "/pasta.jpg" },
 ];
 
 export default function EarningPage() {
-  const headerTitles = ["VENDOR / RESTAURANT NAME", "CONTACT INFO", "TOTAL ORDERS", "TOTAL SALES", "VENDOR EARNING", "ACTION"];
+  const headerTitles = ["VENDOR / RESTAURANT NAME", "CONTACT INFO", "TOTAL TABLES", "TOTAL ORDERS", "TOTAL SALES", "VENDOR EARNING"];
 
   return (
     <div className="min-h-screen bg-background">
@@ -157,12 +157,11 @@ export default function EarningPage() {
                     <p className="text-sm font-bold text-dark-brown">{v.email}</p>
                     <p className="text-xs text-gray-foreground">{v.phone}</p>
                   </TableCell>
+                  <TableCell className="font-bold text-dark-brown text-sm px-6 py-4">{v.tables}</TableCell>
                   <TableCell className="font-bold text-dark-brown text-sm px-6 py-4">{v.orders}</TableCell>
                   <TableCell className="font-bold text-dark-brown text-sm px-6 py-4">{v.sales}</TableCell>
                   <TableCell className="font-bold text-primary text-sm px-6 py-4">{v.earning}</TableCell>
-                  <TableCell className="py-3 px-4 text-sm">
-                    <button type="button" className="font-bold text-primary hover:text-dark-orange cursor-pointer bg-transparent border-none p-0">View Details</button>
-                  </TableCell>
+                  
                 </TableRow>
               ))}
             </TableBody>

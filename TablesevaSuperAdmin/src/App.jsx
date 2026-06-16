@@ -39,7 +39,9 @@ export default function App() {
         orderOpen={orderOpen} setOrderOpen={setOrderOpen}
         paymentOpen={paymentOpen} setPaymentOpen={setPaymentOpen}
         handleLogout={handleLogout}
+        activePath={location.pathname} 
       />
+      
 
       <main className="flex-1 h-screen overflow-hidden pt-16 md:pt-0">
         <Routes>
