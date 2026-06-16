@@ -1,4 +1,4 @@
-import { Search, Bell, HelpCircle, Plus, Settings, AlertCircle, } from "lucide-react";
+import { Search, Plus, AlertCircle, } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from "@/components/ui/table";
@@ -46,17 +46,7 @@ export default function ApproveReject() {
         </div>
 
         <div className="flex items-center gap-2">
-          <IconButton label="Notifications">
-            <Bell className="h-5 w-5 text-gray-foreground" />
-          </IconButton>
-
-          <IconButton label="Help">
-            <HelpCircle className="h-5 w-5 text-gray-foreground" />
-          </IconButton>
-
-          <IconButton label="Settings">
-            <Settings className="h-5 w-5 text-gray-foreground" />
-          </IconButton>
+          
 
           <div className="pl-4 border-l border-light-gray ml-2 flex items-center gap-2">
             <span className="font-medium text-sm text-dark-brown">
@@ -90,17 +80,7 @@ export default function ApproveReject() {
           </Button>
         </div>
 
-        <div className="flex mb-8 border-b border-light-gray">
-          <button className="px-4 py-2 bg-background text-foreground font-medium text-sm border-l border-r border-t border-light-gray hover:bg-border/20 transition-colors">
-            All Vendors
-          </button>
-
-          <button className="px-4 py-2 bg-accent
-           text-surface-white font-bold text-sm">
-            Pending Approvals (12)
-          </button>
-        </div>
-
+      
         <Alert className="mb-8 border-border bg-surface-white p-4 rounded-none">
           <AlertCircle className="h-5 w-5 text-accent" />
           <AlertDescription className="text-foreground text-sm">
