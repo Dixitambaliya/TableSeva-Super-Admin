@@ -1,4 +1,4 @@
-import { Search, Bell, HelpCircle, Settings, Download, ChevronLeft, ChevronRight, CalendarDays, Filter } from "lucide-react";
+import { Search, Download, ChevronLeft, ChevronRight, CalendarDays, Filter } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -31,9 +31,7 @@ export default function CompleteOrder() {
           <Input type="text" placeholder="Search vendors, orders, or support..." className="pl-10 bg-background border-border text-dark-brown rounded-none" />
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon"><Bell className="h-5 w-5 text-gray-foreground" /></Button>
-          <Button variant="ghost" size="icon"><HelpCircle className="h-5 w-5 text-gray-foreground" /></Button>
-          <Button variant="ghost" size="icon"><Settings className="h-5 w-5 text-gray-foreground" /></Button>
+          
           <div className="pl-4 border-l border-light-gray ml-2 flex items-center gap-2">
             <span className="font-medium text-sm text-dark-brown">Alice</span>
             <img src="/alice.jpg" alt="Alice Martin" className="h-8 w-8 rounded-none border border-border object-cover" />

@@ -1,4 +1,4 @@
-import { Search, Bell, HelpCircle, Plus, Filter, ArrowUpDown, ChevronLeft, ChevronRight, Settings, TrendingUp, Zap, Ban, Star } from "lucide-react";
+import { Search, Plus, Filter, ArrowUpDown, ChevronLeft, ChevronRight, Settings, TrendingUp, Zap, Ban, Star } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -43,9 +43,7 @@ export default function VendorPage() {
           <Input type="text" placeholder="Search vendors, orders, or support..." className="pl-10 bg-background border-border text-dark-brown rounded-none" />
         </div>
         <div className="flex items-center gap-2">
-          <IconButton label="Notifications"><Bell className="h-5 w-5 text-gray-foreground" /></IconButton>
-          <IconButton label="Help"><HelpCircle className="h-5 w-5 text-gray-foreground" /></IconButton>
-          <IconButton label="Settings"><Settings className="h-5 w-5 text-gray-foreground" /></IconButton>
+          
           <div className="pl-4 border-l border-light-gray ml-2 flex items-center gap-2">
             <span className="font-medium text-sm text-dark-brown">Alice</span>
             <img src="/alice.jpg" alt="Alice Martin" className="h-8 w-8 rounded-none border border-border object-cover" />
@@ -62,13 +60,6 @@ export default function VendorPage() {
           <Button className="bg-accent hover:bg-primary text-surface-white px-6 py-5 font-semibold transition-all rounded-none">
             <Plus className="mr-2 h-4 w-4" /> Register New Vendor
           </Button>
-        </div>
-
-        <div className="flex mb-8 border-b border-light-gray">
-          <button className="px-4 py-2 bg-accent text-surface-white font-bold text-sm">All Vendors</button>
-          <button className="px-4 py-2 bg-background text-dark-brown font-medium text-sm border-r border-t border-light-gray hover:bg-border/20 transition-colors">
-            Pending Approvals (12)
-          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

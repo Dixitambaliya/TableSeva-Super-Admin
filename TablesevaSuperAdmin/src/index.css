@@ -230,3 +230,21 @@
     @apply font-sans;
   }
 }
+
+/* Activate Lenis Smooth Scroll */
+html.lenis, html.lenis body {
+  height: auto;
+  overflow: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* Hide the default scrollbar for a clean design */
+html.lenis {
+  scrollbar-width: none;
+}
+html.lenis::-webkit-scrollbar {
+  display: none;
+}
